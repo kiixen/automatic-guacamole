@@ -1,20 +1,27 @@
-from time import time 
-import io;
-def logger(fn, ):
-    print('decorator')
-    def log(k):
-        start = time();
-        
-        print('run');
-        fn('a');
-        print(f'ending with time: {time() - start}');
-    return log;
+import time;
 
-def a (b):
-    print('is a')
-@logger(a)
-def main(param):
-    for x in range(10000000):
-        print(x, param);
+def timer(fn):
+    print('timer performed');
+    def t(*arg, **kwargs):
+        startTime = time.time();
+        fn(*arg, *kwargs);
+        endTime = time.time();
+        print(endTime - startTime);
+    return t;
 
-main()
+def love(fn):
+    print('я люблю Мохинур');
+    def l(*arg, **kwargs):
+        return fn(*arg, **kwargs);
+    return l;
+
+@love
+@timer
+def main(a) :
+    for x in range(1000000):
+        print(x, a);
+
+
+# timer(main)('a')
+
+main;
