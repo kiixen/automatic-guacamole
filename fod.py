@@ -1,4 +1,6 @@
 import random
+import time
+
 class FOD:
     def __init__(self):
         self.randomWords =["psycho","developer","melancholy"];
