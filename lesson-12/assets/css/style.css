@@ -1,0 +1,31 @@
+* {margin: 0;}
+h2{
+    color: green;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: blue;
+}
+.text-green{
+    color: green;
+}
+#external {
+    font-size: 48px;
+}
+
+/* aaaaa */
+p .in-green-p.in-p{
+    color: red;
+    /* font-size:28px; */
+}
+p span span{
+    color: chocolate;
+}
+.text-lg{
+    font-size: 32px;
+}
+.text-orange{
+    color: orange;
+}
+p.center, h2.center{
+    text-align: center;
+}
